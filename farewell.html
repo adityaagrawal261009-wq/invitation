@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Farewell Surprise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h2>Surprise Challenge 🎯</h2>
+    <p>Unscramble this word to unlock your farewell clip: <b>WELFAERL</b></p>
+    <input type="text" id="answer" placeholder="Type answer">
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="result"></p>
+  </div>
+
+  <video id="farewellVideo" class="hidden" controls>
+    <source src="khana.webm" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+
+  <script src="script.js"></script>
+</body>
+</html>

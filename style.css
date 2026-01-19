@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #ff6f91, #ff9671, #ffc75f, #845ec2);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.card {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  color: #222;
+  width: 100%;
+  max-width: 500px;
+  animation: fadeIn 2s ease;
+  position: relative;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+input, select {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  flex: 1;
+  outline: none;
+  font-size: 1rem;
+}
+
+button, .btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #ff6f91, #ff9671);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+button:hover, .btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #845ec2, #ffc75f);
+}
+
+.hidden {
+  display: none;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Video styling */
+video {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center card vertically */
+    min-height: 100vh;
+  }
+  .card {
+    width: 95%;
+    padding: 1.5rem;
+    margin: auto;
+  }
+  .input-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  input, select, button, .btn {
+    width: 100%;
+    margin: 8px 0;
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Farewell Invitation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card" id="loginCard">
+    <h2>🎓 Farewell 2026 Invitation</h2>
+    <form onsubmit="return loginUser(event)" class="form-grid">
+      <div class="input-row">
+        <select id="section" required>
+          <option value="">Section</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+        </select>
+        <input type="number" id="roll" placeholder="Roll No." required>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <p id="welcome"></p>
+  </div>
+
+  <div class="card hidden" id="inviteCard">
+    <h2 id="inviteName"></h2>
+    <p id="inviteMessage"></p>
+    <!-- Ensure farewell.html is in the same folder -->
+    <a href="farewell.html" class="btn">Go to Farewell Surprise 🎁</a>
+    <canvas id="confetti"></canvas>
+  </div>
+
+  <!-- Audio placeholders -->
+  <audio id="audio69" src="chalchalchal.mp3"></audio>
+  <audio id="audioWrong" src="wrong.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
